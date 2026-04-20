@@ -8,7 +8,7 @@ int main()
  
    int temp[frames];
    int pageFaults = 0;
-   int i, j, k, found;
+   int i, j, found;
  
    // Initialize frames
    for(i = 0; i < frames; i++)
