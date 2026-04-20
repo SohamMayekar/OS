@@ -268,7 +268,7 @@ Code:
 
 #include <stdio.h>
  
-void main()
+int main()
 {
    int n, i;
    printf("Enter no. of processes\n");
@@ -320,6 +320,7 @@ void main()
  
    printf("Average TAT = %.2f\n", avgtat);
    printf("Average WT = %.2f\n", avgwt);
+   return 0;
 }
  
  
@@ -351,7 +352,7 @@ gcc (filename).c
 Code:
 #include <stdio.h>
  
-void main()
+int main()
 {
    int n, i, j;
  
@@ -409,6 +410,7 @@ void main()
  
    printf("\nAverage Waiting Time = %f", avgwt);
    printf("\nAverage Turnaround Time = %f\n", avgtat);
+   return 0;
 }
  
  
@@ -546,8 +548,12 @@ gcc (firstfit-filename).c
 First fit Code:
 #include <stdio.h>
  
-void firstfit(int blockSize[], int m, int processSize[], int n)
+int main()
 {
+   int blockSize[] = {100, 500, 200, 300, 600};
+   int processSize[] = {212, 417, 112, 426};
+   int m = sizeof(blockSize) / sizeof(blockSize[0]);
+   int n = sizeof(processSize) / sizeof(processSize[0]);
    int allocation[n];
  
    // Initialize allocation
@@ -581,6 +587,7 @@ void firstfit(int blockSize[], int m, int processSize[], int n)
  
        printf("\n");
    }
+   return 0;
 }
  
 touch (worstfit-filename).c                     {guys we need to create 3 different files and run it one by one}
@@ -595,8 +602,12 @@ gcc (worstfit-filename).c
 Worst fit Code:
 #include <stdio.h>
  
-void worstfit(int blockSize[], int m, int processSize[], int n)
+int main()
 {
+   int blockSize[] = {100, 500, 200, 300, 600};
+   int processSize[] = {212, 417, 112, 426};
+   int m = sizeof(blockSize) / sizeof(blockSize[0]);
+   int n = sizeof(processSize) / sizeof(processSize[0]);
    int allocation[n];
  
    for(int i = 0; i < n; i++)
@@ -634,6 +645,7 @@ void worstfit(int blockSize[], int m, int processSize[], int n)
  
        printf("\n");
    }
+   return 0;
 }
  
  
@@ -649,8 +661,12 @@ gcc (bestfit-filename).c
 Best fit Code:
 #include <stdio.h>
  
-void bestfit(int blockSize[], int m, int processSize[], int n)
+int main()
 {
+   int blockSize[] = {100, 500, 200, 300, 600};
+   int processSize[] = {212, 417, 112, 426};
+   int m = sizeof(blockSize) / sizeof(blockSize[0]);
+   int n = sizeof(processSize) / sizeof(processSize[0]);
    int allocation[n];
  
    for(int i = 0; i < n; i++)
@@ -688,6 +704,7 @@ void bestfit(int blockSize[], int m, int processSize[], int n)
  
        printf("\n");
    }
+   return 0;
 }
  
  
@@ -719,7 +736,7 @@ int main()
  
    int temp[frames];
    int pageFaults = 0;
-   int i, j, k, found;
+   int i, j, found;
  
    // Initialize frames
    for(i = 0; i < frames; i++)
@@ -791,7 +808,7 @@ int main()
  
    int temp[frames], used[frames];
    int pageFaults = 0;
-   int i, j, k, found, lruIndex;
+   int i, j, found, lruIndex;
  
    // Initialize
    for(i = 0; i < frames; i++)
