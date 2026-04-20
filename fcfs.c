@@ -45,4 +45,5 @@ int main() {
 
   printf("Average TAT = %.2f\n", avgtat);
   printf("Average WT = %.2f\n", avgwt);
+  return 0;
 }
