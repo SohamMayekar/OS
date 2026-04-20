@@ -1,0 +1,51 @@
+mkdir (your name)
+
+cd (your name)
+
+cat>file1
+
+enter data
+
+ctrl z
+
+cat>file2
+
+enter data
+
+ctrl z
+
+mv file1 file2
+
+head file2
+
+tail file2
+
+cat>file3
+
+enter data
+
+ctrl z
+
+cp file2 file3
+
+rm file3
+
+who
+
+whoami
+
+date
+
+sort file2
+
+ps
+
+ls
+
+rm file2
+
+cd ..
+
+rmdir (your name)
+
+history
